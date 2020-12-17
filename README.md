@@ -2,7 +2,9 @@
 
 ## Varför?
 
-Tittade på Tom Scott på YouTube och hamnade på en video om FizzBuzz-leken som man använder för att testa en utvecklare under arbetsintervjuer. Ville därför bara slänga ihop en liten kod för att se hur min lösning ser ut jämfört med Toms.
+Tittade på Tom Scott på YouTube och hamnade på en video om FizzBuzz-leken som man använder för att testa en utvecklare under arbetsintervjuer.
+
+Ville därför bara slänga ihop en liten kod för att se hur min lösning ser ut jämfört med Toms och för att utvärdera mitt arbete och hitta förbättringar i mitt sätt att ta itu med en uppgift.
 
 ## Reflektioner
 
@@ -12,11 +14,9 @@ Som Tom tog upp i videon så får man många olika lösningar från olika utveck
 
 Jag tänker ut problemet medan jag skriver koden, ändrar fel efter de dyker upp; jag är dålig på att planera.
 
-
-
 ### Översätta teori till praktiken
 
-Jag tänkte inte igenom artimetiken ordenligt, krånglade till logiken därefter; jag bör bli bättre på att fundera ut och utföra praktiska implementeringen av en teoretisk lösning.
+Jag tänkte inte igenom logiken ordenligt och krånglade till den i praktiken; jag bör bli bättre på att fundera ut och utföra praktiska implementeringen av en teoretisk lösning.
 
 För att kontrollera om något är dividerbart med sig själv så gjorde jag följande:
 
@@ -24,9 +24,12 @@ För att kontrollera om något är dividerbart med sig själv så gjorde jag fö
 - Kontrollerade typen (float eller integer) av variablen där resultatet av divisionen lagrades och utifrån det...
 - så kontrollerade jag om värdet var ett heltal eller inte.
 
-Såhär ser då funktionen ut för att utföra division och kontroller.
+Såhär såg då logiken ut från början.
 
 ```python
+n_fizz = 3
+n_buzz = 5
+
 def is_divisible(n, by_n):
     n_sum = (n / by_n)
 
@@ -49,7 +52,7 @@ def is_fizzbuzz(n) -> int:
     return n_sum
 ```
 
-Jag kunde ha förenklat denna kod genom att ha använt mig av kvadrater enligt följande.
+Jag kunde ha förenklat denna kod genom att ha använt mig av enklare artimetik.
 
 ```python
 def is_fizzbuzz(n) -> int:
