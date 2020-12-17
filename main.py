@@ -15,23 +15,12 @@ def get_printable(n):
 
     return n_printable[n]
 
-def is_divisible(n, by_n):
-    n_sum = (n / by_n)
-
-    if type(n_sum) is float:
-        return n_sum.is_integer()
-
-    if type(n_sum) is int:
-        return True
-
-    return False
-
 def is_fizzbuzz(n) -> int:
     n_test = (n_fizz, n_buzz, (n_fizz * n_buzz))
     n_sum = 0
 
     for n2 in n_test:
-        if is_divisible(n, n2):
+        if n % n2 == 0:
             n_sum = n2
     
     return n_sum

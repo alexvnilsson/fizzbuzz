@@ -37,13 +37,7 @@ def is_divisible(n, by_n):
         return True
 
     return False
-```
 
-Jag kunde ha förenklat denna kod genom att ha använt mig av kvadrater, d.v.s. enligt följande:
-
-Invokerar den funktionen från `is_fizzbuzz`.
-
-```python
 def is_fizzbuzz(n) -> int:
     n_test = (n_fizz, n_buzz, (n_fizz * n_buzz))
     n_sum = 0
@@ -55,4 +49,18 @@ def is_fizzbuzz(n) -> int:
     return n_sum
 ```
 
-Returvärdet från denna funktionen är 0, 3, 5 eller 15 (0, Fizz, Buzz eller FizzBuzz). Rätt enkel och tydlig kod.
+Jag kunde ha förenklat denna kod genom att ha använt mig av kvadrater enligt följande.
+
+```python
+def is_fizzbuzz(n) -> int:
+    n_test = (n_fizz, n_buzz, (n_fizz * n_buzz))
+    n_sum = 0
+
+    for n2 in n_test:
+        if n % n2 == 0:
+            n_sum = n2
+    
+    return n_sum
+```
+
+Nu behöver jag inte invokera `is_divisble` längre, så kodbasen blir lättare med samma resultat. Värt att fundera på i större projekt i framtiden: planering och utvärdering är superviktigt.
